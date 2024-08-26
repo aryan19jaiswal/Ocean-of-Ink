@@ -42,14 +42,10 @@ html, body {
     text-decoration: underline;
 }
 
-.navbar .nav-links {
-    display: flex;
-    gap: 20px;
-}
-
 .navbar .nav-links a {
     color: #fff;
     text-decoration: none;
+    margin-left: 20px;
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
@@ -59,23 +55,54 @@ html, body {
     color: #e50914;
 }
 
-/* Main Styling */
+/* Hero Section Styling */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #444;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e50914;
+}
+
+.hero-section p {
+    font-size: 18px;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Container Styling */
 .container {
     padding: 20px;
-    text-align: center; /* Center the text content for better mobile appearance */
 }
 
-.container heading {
-    text-align: center;
-    text-decoration: dotted;
-    font-weight: bold;
-    font-size: 20px;
-    font-style: italic;
-    color: blue;
+.quote-list {
+    list-style: none;
+    padding-left: 0;
 }
 
-.container ul{
-    text-align: left;
+.quote-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.quote-item p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.quote-item:hover {
+    background-color: #e50914;
+    transform: scale(1.02);
+    color: #fff;
 }
 
 /* Footer Styling */
@@ -86,15 +113,10 @@ footer {
     border-top: 1px solid #444;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
 .footer-links a {
     color: #fff;
     text-decoration: none;
+    margin: 0 10px;
     font-size: 14px;
     transition: color 0.3s;
     font-weight: bold;
@@ -104,53 +126,70 @@ footer {
     color: #e50914;
 }
 
-/* Responsive Design - Media Queries */
+/* Media Queries for Responsiveness */
 
-/* For tablets and larger devices */
-@media (max-width: 768px) {
-    .navbar .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar .nav-links a {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
-    .container heading {
-        font-size: 24px; /* Increase heading size for better readability */
-    }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar .logo {
-        margin-bottom: 10px;
+        padding: 10px;
     }
 
     .navbar .nav-links {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        margin-top: 10px;
     }
 
     .navbar .nav-links a {
-        margin-left: 0;
-        font-size: 18px;
+        margin: 5px 0;
     }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .quote-item p {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 10px;
     }
 
     .footer-links a {
-        font-size: 16px; /* Make footer links more legible on small screens */
+        margin: 5px 0;
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .navbar .nav-links {
+        margin-left: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 17px;
+    }
+
+    .quote-item p {
+        font-size: 17px;
+    }
+}
+
+/* Large devices (desktops, 901px and up) */
+@media only screen and (min-width: 901px) {
+    .quote-item p {
+        font-size: 18px;
     }
 }
