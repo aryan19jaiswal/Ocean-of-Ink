@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #0d1b2a);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid #444;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: underline;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #e50914;
+}
+
+/* Main Styling */
+.container {
+    display: grid;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overwritten Heading Styling */
+.container heading {
+    text-align: center;
+    text-decoration: dotted;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: blue;
+}
+
+/* Music List Styling */
+.music-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.music-poster {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.music-details {
+    font-size: 16px;
+}
+
+.music-details a {
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.music-details a:hover {
+    color: #fff;
+}
+
+.music-details p {
+    margin: 5px 0;
+}
+
+audio {
+    width: 300px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height to make the player more compact */
+    margin-top: 10px;
+    border-radius: 5px; /* Optional: add some rounding to the corners */
+}
+
+/* Footer Styling */
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #e50914;
+}
+
+/* Responsive Styling */
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav-links a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .music-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .music-poster {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .music-details {
+        font-size: 14px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .navbar .nav-links a {
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    .music-item {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .music-poster {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .music-details {
+        font-size: 15px;
+    }
+
+    audio {
+        width: 250px;
+    }
+}

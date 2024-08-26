@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #0d1b2a);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid #444;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: underline;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #e50914;
+}
+
+/* Main Styling */
+.container {
+    display: grid;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overwritten Heading Styling */
+.container heading {
+    text-align: center;
+    text-decoration: dotted;
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    color: blue;
+}
+
+/* Album List Styling */
+.album-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.album-poster {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.album-details {
+    font-size: 16px;
+}
+
+.album-details a {
+    font-weight: bold;
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.album-details a:hover {
+    color: #fff;
+}
+
+.album-details p {
+    margin: 5px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #e50914;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links a {
+        margin: 5px 0;
+    }
+
+    .album-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-poster {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .album-details {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .navbar .nav-links {
+        margin-left: 10px;
+    }
+
+    .album-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .album-poster {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .album-details {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+/* Large devices (desktops, 901px and up) */
+@media only screen and (min-width: 901px) {
+    .album-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .album-poster {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .album-details {
+        text-align: left;
+        font-size: 16px;
+    }
+}
