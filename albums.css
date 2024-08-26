@@ -21,7 +21,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #444;
 }
 
@@ -39,7 +39,6 @@ html, body {
     font-size: 24px;
     font-weight: bold;
     color: #e50914;
-    text-decoration: underline;
 }
 
 .navbar .nav-links a {
@@ -57,62 +56,79 @@ html, body {
 
 /* Main Styling */
 .container {
-    display: grid;
-    padding: 20px;
-    position: relative;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
 }
 
-/* Overwritten Heading Styling */
-.container heading {
-    text-align: center;
-    text-decoration: dotted;
-    font-weight: bold;
-    font-size: 20px;
-    font-style: italic;
-    color: blue;
+.main-heading {
+    font-size: 36px;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d3d3d3;
 }
 
 /* Album List Styling */
 .album-list {
-    list-style: none;
-    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .album-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.album-item:hover {
+    transform: scale(1.05);
 }
 
 .album-poster {
-    width: 150px;
+    width: 100%;
     height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.album-details {
-    font-size: 16px;
-}
-
-.album-details a {
-    font-weight: bold;
+.album-details h2 {
+    font-size: 22px;
     color: #e50914;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.album-details a:hover {
-    color: #fff;
+    margin-bottom: 10px;
 }
 
 .album-details p {
-    margin: 5px 0;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e50914;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #b20710;
 }
 
 /* Footer Styling */
 footer {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #444;
@@ -132,8 +148,6 @@ footer {
 }
 
 /* Media Queries for Responsiveness */
-
-/* Small devices (phones, 600px and below) */
 @media only screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
@@ -151,67 +165,24 @@ footer {
         margin: 5px 0;
     }
 
+    .container {
+        padding: 20px 10px;
+    }
+
     .album-item {
-        flex-direction: column;
-        align-items: center;
+        padding: 15px;
     }
 
-    .album-poster {
-        width: 100%;
-        margin-bottom: 10px;
+    .album-details h2 {
+        font-size: 20px;
     }
 
-    .album-details {
-        text-align: center;
+    .album-details p {
         font-size: 14px;
     }
 
-    footer {
-        padding: 10px;
-    }
-
-    .footer-links a {
-        margin: 5px 0;
-        display: block;
-    }
-}
-
-/* Medium devices (tablets, 600px to 900px) */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-    .navbar .nav-links {
-        margin-left: 10px;
-    }
-
-    .album-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .album-poster {
-        width: 70%;
-        margin-bottom: 10px;
-    }
-
-    .album-details {
-        text-align: center;
-        font-size: 15px;
-    }
-}
-
-/* Large devices (desktops, 901px and up) */
-@media only screen and (min-width: 901px) {
-    .album-item {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .album-poster {
-        width: 150px;
-        margin-right: 20px;
-    }
-
-    .album-details {
-        text-align: left;
-        font-size: 16px;
+    .download-btn {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
