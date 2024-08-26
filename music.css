@@ -21,7 +21,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #444;
 }
 
@@ -39,7 +39,6 @@ html, body {
     font-size: 24px;
     font-weight: bold;
     color: #e50914;
-    text-decoration: underline;
 }
 
 .navbar .nav-links a {
@@ -57,42 +56,63 @@ html, body {
 
 /* Main Styling */
 .container {
-    display: grid;
-    padding: 20px;
-    position: relative;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
 }
 
 /* Overwritten Heading Styling */
-.container heading {
-    text-align: center;
-    text-decoration: dotted;
-    font-weight: bold;
-    font-size: 20px;
-    font-style: italic;
-    color: blue;
+.main-heading {
+    font-size: 36px;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d3d3d3;
 }
 
 /* Music List Styling */
 .music-list {
     list-style: none;
     padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .music-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .music-poster {
-    width: 150px;
+    width: 200px;
     height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .music-details {
     font-size: 16px;
+}
+
+.music-details h2 {
+    font-size: 20px;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.music-details p {
+    margin: 5px 0;
 }
 
 .music-details a {
@@ -106,20 +126,15 @@ html, body {
     color: #fff;
 }
 
-.music-details p {
-    margin: 5px 0;
-}
-
 audio {
-    width: 300px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height to make the player more compact */
+    width: 100%;
     margin-top: 10px;
     border-radius: 5px; /* Optional: add some rounding to the corners */
 }
 
 /* Footer Styling */
 footer {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #444;
@@ -158,7 +173,7 @@ footer {
 
     .music-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .music-poster {
@@ -189,13 +204,12 @@ footer {
     }
 
     .music-item {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
     }
 
     .music-poster {
-        width: 120px;
+        width: 150px;
         margin-bottom: 10px;
     }
 
