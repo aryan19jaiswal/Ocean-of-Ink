@@ -21,7 +21,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid #444;
 }
 
@@ -39,7 +39,6 @@ html, body {
     font-size: 24px;
     font-weight: bold;
     color: #e50914;
-    text-decoration: underline;
 }
 
 .navbar .nav-links a {
@@ -57,27 +56,29 @@ html, body {
 
 /* Main Styling */
 .container {
-    display: grid;
-    padding: 20px;
-    position: relative;
-}
-
-.container heading {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
     text-align: center;
-    text-decoration: dotted;
-    font-weight: bold;
-    font-size: 20px;
-    font-style: italic;
-    color: blue;
 }
 
-.container ul li p {
+/* Overwritten Heading Styling */
+.main-heading {
+    font-size: 36px;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d3d3d3;
     font-weight: lighter;
 }
 
 /* Footer Styling */
 footer {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
     border-top: 1px solid #444;
@@ -96,64 +97,54 @@ footer {
     color: #e50914;
 }
 
-/* Media Queries */
+/* Responsive Styling */
 
-/* Small Devices (Tablets and Phones) */
-@media (max-width: 768px) {
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .navbar .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+    .navbar .logo {
+        margin-bottom: 10px;
     }
 
     .navbar .nav-links a {
         margin: 10px 0;
-    }
-
-    .container heading {
-        font-size: 18px;
-    }
-
-    .footer-links a {
-        font-size: 12px;
-    }
-}
-
-/* Extra Small Devices (Phones) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 15px;
-    }
-
-    .navbar .logo img {
-        height: 30px;
-        margin-right: 5px;
-    }
-
-    .navbar .logo span {
-        font-size: 20px;
-    }
-
-    .navbar .nav-links a {
         font-size: 14px;
     }
 
-    .container heading {
-        font-size: 16px;
+    .main-heading {
+        font-size: 28px;
     }
 
-    footer {
-        padding: 15px;
+    .sub-heading {
+        font-size: 16px;
     }
 
     .footer-links a {
         font-size: 12px;
-        margin: 5px;
+        margin: 5px 0;
+    }
+}
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .navbar .nav-links a {
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .sub-heading {
+        font-size: 17px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
     }
 }
